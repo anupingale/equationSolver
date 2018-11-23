@@ -4,7 +4,11 @@ const main = function() {
   let seperatedEquation = seperateEquation(equation);
   let divisor = getDivider(seperatedEquation);
   let calculate = revCalculation(divisor["rhs"]);
-   console.log(calculate/+divisor["divisor"]);
+  if(divisor['divisor'] == "+") {
+     divisor['divisor'] = '1';
+  }
+   let output = calculate/+eval(divisor["divisor"]);
+   console.log('Value of x is '+ output);
 }
 
 main();

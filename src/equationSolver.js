@@ -16,7 +16,7 @@ const seperateEquation = function(equation) {
 
 const getDivider = function(equation) {
   let eqn = equation["lhs"].split(" ");
-  let divider = 1;
+  let divider;
   for(element of eqn) {
     if(element.includes("x")) {
       divider = element.split("");
